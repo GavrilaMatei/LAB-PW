@@ -9,7 +9,7 @@ console.warn("goodbye");
 }
 function timeBasedHello(){
 
-const date =new Date("2026-02-25 18:28");
+const date =new Date();
 const dataPos =document.querySelector('header p');
 console.log(date);
 const hour =date.getHours();
