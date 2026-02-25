@@ -1,0 +1,68 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" title="Prezentare personala">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        header{text-align: center;}
+    </style>
+    <title>
+        Prezentare personala
+    </title>
+</head>
+<script src="contact_form.js">
+</script>
+<body>
+    <header>
+        Gavrila Matei
+        <br>
+        Facultatea de inginerie electrica si stinta calculatoarelor
+    </header>
+    <nav>
+        <li>About</li>
+        <li>Education</li>
+        <li>Contact</li>
+    </nav>  
+    <main>
+        <section>
+            <h1>About</h1>
+            <p>
+                <img src="images/Untitled.jpg" alt="Gavrila Matei" loading="lazy">
+                <br>Student at IESC UNITBV 
+                <br>Specialization:Computers engineering
+                <br>Year:2
+            </p>
+        </section>
+        <section>
+            <h2>
+                Education
+            </h2>
+            <ol>
+                <li>Scoala Gimnaziala nr.5</li>
+                <li>Liceul tehnic Transilvania 2020-2024</li>
+                <Li>IESC UNITBV 2024- prezent</Li>
+            </ol>
+        </section>
+    </main>
+    <aside>
+        <h3>Favorite quote:</h3>
+       <p> What's your greatest fear? - Coach Carter</p>
+       <h4>Hobbys:</h4>
+       <li>Cooking</li>
+       <li>Video games</li>
+    </aside>
+    <footer>
+        Written by <a href="mailto:matei.gavrial@student.unitbv.ro"> Gavrila Matei</a>
+        <form> 
+            <label for="name">Name:</label>
+            <input type="text" id="name" autocomplete="name">
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" autocomplete="email" required>
+            <br>
+            <label for="mesaj" >Message:</label>
+            <textarea required minlength="10" id="mesaj"></textarea>
+            <br>
+            <button type="submit" onclick="submitForm()">Send</button>
+        </form>
+    </footer>
+</body>
