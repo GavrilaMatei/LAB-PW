@@ -10,8 +10,6 @@
         Prezentare personala
     </title>
 </head>
-<script src="contact_form.js">
-</script>
 <body>
     <header>
         Gavrila Matei
@@ -30,7 +28,7 @@
         <section>
             <h1>About</h1>
             <p>
-                <img src="images/Untitled.jpg" alt="Gavrila Matei" loading="lazy">
+                <img src="images/pfp.jpg" alt="Gavrila Matei" loading="lazy" width="232">
                 <br>Student at IESC UNITBV 
                 <br>Specialization:Computers engineering
                 <br>Year:2
@@ -57,7 +55,7 @@
     <footer>
         Written by <a href="mailto:matei.gavrial@student.unitbv.ro"> Gavrila Matei</a>
     </footer>
-          <form> 
+          <form id="MSG-form"> 
             <label for="name">Name:</label>
             <input type="text" id="name" autocomplete="name">
             <br>
@@ -67,9 +65,10 @@
             <label for="mesaj" >Message:</label>
             <textarea required minlength="10" id="mesaj"></textarea>
             <br>
-            <button type="submit" onclick="submitForm()">Send</button>
+            <button type="submit">Send</button>
+            <p id="form-feedback"></p>
         </form>
-        
-<script src="contact_form.js"> </script>
+<script src="contact_form.js">
+</script>
 </body>
 </html>
