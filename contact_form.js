@@ -1,7 +1,16 @@
 const form = document.getElementById("MSG-form");
 form.addEventListener("submit", validate);
-
-
+const darkM = document.getElementById("darkmodeBTN");
+darkM.addEventListener('click',dark);
+function dark(){
+    document.body.classList.toggle("dark-mode");
+    if(document.body.classList.contains("dark-mode"));{
+        darkM.textContent = "Light mode";
+    }
+    if(!document.body.classList.contains("dark-mode")){
+        darkM.textContent = "Dark mode";
+    }
+}
 function validate(event){
     const nume = document.getElementById("name").value;
     const email = document.getElementById("email").value;
