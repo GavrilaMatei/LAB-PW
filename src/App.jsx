@@ -2,6 +2,7 @@ import Card from './Card';
 import { useState } from 'react';
 import QuickNote from './QuickNote';
 import TodoList from './TodoList';
+import ContactForm from './ContactForm';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,6 +26,7 @@ function App() {
     
     <QuickNote />
     <TodoList />
+    <ContactForm/>
     </div>
   );
 }
