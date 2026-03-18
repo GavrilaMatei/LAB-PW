@@ -1,8 +1,9 @@
-function NumeComponenta() {
+function Card(props) {
  return (
  <div>
- {/* continutul componsentei */}
+ <h3>{props.title}</h3>
+ <p>{props.description}</p>
  </div>
  );
 }
-export default NumeComponenta;
+export default Card;
