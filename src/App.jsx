@@ -13,7 +13,9 @@ function App() {
   {projects.map(function(item, index) {
   return <Card key={index} title={item.title} description={item.description} />;
   })}
-   <button onClick={() => setCount(count + 1)}>Click</button>
+   <button onClick={() => setCount(count + 1)}>+1 button</button>
+   <button onClick={() => setCount(count - 1)}>-1 button</button>
+   <button onClick={() => setCount(0)}>reset</button>
   <p>Ai apasat de {count} ori</p>
   </div>
   );
