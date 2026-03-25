@@ -3,6 +3,7 @@ import { useState } from 'react';
 import QuickNote from './QuickNote';
 import TodoList from './TodoList';
 import ContactForm from './ContactForm';
+import Clock from './Clock';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,6 +28,7 @@ function App() {
     <QuickNote />
     <TodoList />
     <ContactForm/>
+    <Clock/>
     </div>
   );
 }
