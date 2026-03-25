@@ -11,7 +11,6 @@ function Clock(){
   }, []); 
   return (
     <div>
-      <h2>Ora curentă:</h2>
       <p>{time.toLocaleTimeString()}</p>
     </div>
   );
