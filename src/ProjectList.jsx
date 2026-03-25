@@ -43,7 +43,7 @@ function ProjectList() {
             }   
             <p>numar de proiecte :{projects.length}</p>
             <p>Finalizate :{projects.filter(p=>p.done).length}</p>
-            <p>numar de proiecte :{projects.filter(p=>!p.done).length}</p>
+            <p>numar de proiecte nefinalizate :{projects.filter(p=>!p.done).length}</p>
         </div>
     );
 }
