@@ -9,7 +9,7 @@ function App() {
   const [count, setCount] = useState(0);
   return (
     <div>
-      <Clock/>
+    <Clock/>
     <h1>Dashboard</h1>
     <ProjectList/>
 

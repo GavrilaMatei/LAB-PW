@@ -3,8 +3,10 @@ import Card from './Card';
 function ProjectList() {
     const [projects, setProjects] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null)
-        useEffect(function() {
+    const [error, setError] = useState(null);
+    const [term,setTerm] = useState('');
+
+         useEffect(function() {
         fetch('/data/projects.json')
             .then(function(response) {
                return response.json(); 
@@ -29,11 +31,19 @@ function ProjectList() {
     return (
         <div>
             <h3>Proiecte</h3>
+            <input
+            value={term}
+            onChange={(e) => setTerm(e.target.value)}
+             /> 
             {
-            projects.map(function(item, index) {
+                projects.filter(function(p){
+                    return p.title.toLowerCase().includes(term.toLowerCase());}).map(function(item, index) {
                     return <Card key={index} title={item.title} description={item.tech} />;
                 })
-            }
+            }   
+            <p>numar de proiecte :{projects.length}</p>
+            <p>Finalizate :{projects.filter(p=>p.done).length}</p>
+            <p>numar de proiecte :{projects.filter(p=>!p.done).length}</p>
         </div>
     );
 }

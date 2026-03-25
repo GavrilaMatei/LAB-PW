@@ -8,7 +8,7 @@ function QuickNote() {
     value={note}
     onChange={(e) => setNote(e.target.value)}
     />
-    <p>Ai scris: {note}</p>
+    <p>Ai scris:{note}</p>
     </div>
  );
 }
