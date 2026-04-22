@@ -17,6 +17,23 @@ app.get('/api/projects', function(req, res) {
  res.json(projects);
 });
 
+app.get  ('/api/projects/:id',function(req,res){
+    const result = projects.find(p =>
+    p.id === parseInt(req.params.id)
+    );
+    if (result) res.json(result);
+    else res.status(404).json({ error: 'Notfound' })
+});
+
+app.get  ('/api/stats',function(req,res){
+    const result = {
+        "total": projects.length,
+        "done": projects.filter(p => p.done).length,
+        "not done": projects.filter(p => !p.done).length
+    }
+    res.json(result);
+});
+
 // Porneste serverul
 app.listen(PORT, function() {
  console.log('Server pornit pe http://localhost:' + PORT);
