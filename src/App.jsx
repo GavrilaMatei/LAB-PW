@@ -14,13 +14,13 @@ import Navbar from './Navbar';
 function App() {
   return (
     <BrowserRouter>   
-    <Navbar />
-        <Routes>
+      <Navbar />
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
-        </Routes>
-        </BrowserRouter>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
