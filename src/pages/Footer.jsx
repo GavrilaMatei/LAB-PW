@@ -1,8 +1,8 @@
 function Footer() {
  return (
- <div>
- <p>Gavrila Matei</p>
- </div>
+ <foot>
+ <p>Gavrila Matei - Student Calculatoare UNITBV</p>
+ </foot>
  );
 }
 export default Footer;

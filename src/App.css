@@ -33,6 +33,17 @@ nav a {
 nav a:hover { background: #34495E; }
 nav a.active { background: #FF7733; }
 
+foot{
+  gap: 15px;
+  padding: 15px;
+  background: #3E7191;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
 .hero {
   position: relative;
 
