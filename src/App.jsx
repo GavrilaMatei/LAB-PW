@@ -5,23 +5,21 @@ import TodoList from './TodoList';
 import ContactForm from './ContactForm';
 import Clock from './Clock';
 import ProjectList from './ProjectList';
-function App() {
-  const [count, setCount] = useState(0);
-  return (
-    <div>
-    <Clock/>
-    <h1>Dashboard</h1>
-    <ProjectList/>
+import { BrowserRouter, Routes, Route } from 'react-router';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 
-    <button onClick={() => setCount(count + 1)}>+1 button</button>
-    <button onClick={() => setCount(count - 1)}>-1 button</button>
-    <button onClick={() => setCount(0)}>reset</button>
-    <p>Ai apasat de {count} ori</p>
-    
-    <QuickNote />
-    <TodoList />
-    <ContactForm/>
-    </div>
+
+function App() {
+  return (
+    <BrowserRouter>
+ <Routes>
+ <Route path="/" element={<Home />} />
+ <Route path="/projects" element={<Projects />} />
+ <Route path="/contact" element={<Contact />} />
+ </Routes>
+ </BrowserRouter>
   );
 }
 
