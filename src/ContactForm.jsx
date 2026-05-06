@@ -37,7 +37,7 @@ function ContactForm() {
             placeholder="mesaj"
         />
         </p>
-        <button onClick={handleFeedback}>submit</button>
+        <button onClick={handleFeedback}>Submit</button>
         <p>{FeedBack}</p>
         </div>
     );

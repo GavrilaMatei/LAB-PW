@@ -68,7 +68,7 @@ function ProjectList() {
                 projects.filter(function(p){
                     return p.title.toLowerCase().includes(term.toLowerCase());}).map(function(item)  {
                     return (<div key={item._id}><Card title={item.title} description={item.tech}/>      
-                            <button onClick={()=>handleDelete(item._id)}>delete project</button> 
+                            <button onClick={()=>handleDelete(item._id)}>Delete project</button> 
                             </div>
                     );
                 })
@@ -90,7 +90,7 @@ function ProjectList() {
                 placeholder="Tech"
             /> 
             </ol>
-            <button onClick={handleSubmit}>submit</button>
+            <button onClick={handleSubmit}>Submit</button>
         </div>
     );
 }
