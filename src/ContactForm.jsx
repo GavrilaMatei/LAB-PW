@@ -16,21 +16,27 @@ function ContactForm() {
     }
     return(
         <div>
+            <p>
         <input 
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Nume"
         />  
+        </p>
+        <p>
         <input 
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="email"
         />  
+        </p>
+        <p>
         <textarea
             value={msg}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="mesaj"
         />
+        </p>
         <button onClick={handleFeedback}>submit</button>
         <p>{FeedBack}</p>
         </div>
