@@ -31,6 +31,7 @@ function ProjectList() {
         return(<div>{error}</div>)
     }
      async function handleDelete(id) {
+        if (window.confirm('Sigur doriti sa stergeti acest proiect?')) {
          try {
          const response = await fetch('http://localhost:3000/api/projects/' + id, {
          method: 'DELETE',
@@ -40,6 +41,22 @@ function ProjectList() {
         } catch (err) {
             console.error('Eroare:', err);
         }
+    }
+    }
+    async function handleToggle(id, currentDone){
+        try {
+            console.log(!currentDone);
+         const response = await fetch('http://localhost:3000/api/projects/' + id, {
+         method: 'PUT',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify({ done : !currentDone}),
+         });
+         const updatedProject = await response.json();
+         setProjects(projects.map(p => p._id === id ? updatedProject : p)) 
+         } catch (err) {
+         console.error('Eroare:', err);
+         }
+        
     }
 
     async function handleSubmit() {
@@ -69,6 +86,7 @@ function ProjectList() {
                     return p.title.toLowerCase().includes(term.toLowerCase());}).map(function(item)  {
                     return (<div key={item._id}><Card title={item.title} description={item.tech}/>      
                             <button onClick={()=>handleDelete(item._id)}>Delete project</button> 
+                            <button onClick={()=>handleToggle(item._id,item.done)}>Done/Undone</button> 
                             </div>
                     );
                 })
