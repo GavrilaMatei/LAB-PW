@@ -80,6 +80,60 @@ button{
   margin-bottom: 40px;
 }
 
+.button1 {
+  background-color:red;
+  color :#ffffff;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 40px;
+}
+
+.button2 {
+  background-color:#3030a2;
+  color :#ffffff;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 40px;
+}
+.button3 {
+  background-color:greenyellow;
+  color :#000000;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 40px;
+}
+
+.button4{
+  border-radius: 12px;
+}
+
+input{
+  text-align: center;
+}
+
+.input1{
+  border-radius: 6px;
+  background-color: #1f2028;
+  color: #ffffff;
+  margin:4px;
+}
+
+.cardDone{
+  color: #33a522;
+}
+
+.cardNotDone{
+  color: #a53322;
+}
+
+#card:hover {
+  border: 4px solid white;
+  margin-left:200px;
+  margin-right:200px;
+  border-radius:10px;
+  font-size: 20px;
+}
+
 h1 {
   font-size: 56px;
   letter-spacing: -1.68px;

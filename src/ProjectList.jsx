@@ -123,12 +123,15 @@ async function handleSave(id,title,tech){
                                 <button onClick={()=>seteditID(null)}>Anuleaza</button>
                         </div>
                     );}
-                        else
-                            return (<div key={item._id}><Card title={item.title} description={item.tech}/>
-                                <button onClick={()=>handleDelete(item._id)}>Delete project</button>      
-                                <button onClick={() => seteditID(item._id)}>Editeaza</button>
-                                <button onClick={()=>handleToggle(item._id,item.done)}>Done/Undone</button> 
-                                </div>
+                        else 
+                            return (<card key={item._id}>
+                                    <div id="card">
+                                        <Card title={item.title} description={item.tech} done = {item.done}/>
+                                        <button className ="button button1" onClick={()=>handleDelete(item._id)}>Delete project</button>      
+                                        <button className ="button button2" onClick={() => seteditID(item._id)}>Editeaza</button>
+                                        <button className ="button button3" onClick={()=>handleToggle(item._id,item.done)}>Done/Undone</button> 
+                                    </div>
+                                </card>
                         );
 
                 })
@@ -137,20 +140,18 @@ async function handleSave(id,title,tech){
             <p>Finalizate :{projects.filter(p=>p.done).length}</p>
             <p>numar de proiecte nefinalizate :{projects.filter(p=>!p.done).length}</p>
             <h3>Add Project</h3>
-            <ol>
-            <input 
+            <input className = "input input1" 
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="Titlu"
-            />  
-            </ol>
-            <ol><input 
+            />
+            <p><input className = "input input1" 
                 value={tech}
                 onChange={(e) => setTech(e.target.value)}
                 placeholder="Tech"
             /> 
-            </ol>
-            <button onClick={handleSubmit}>Submit</button>
+            </p>
+            <button className = "button button4" onClick={handleSubmit}>Submit</button>
         </div>
     );
 }

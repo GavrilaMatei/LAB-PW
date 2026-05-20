@@ -24,7 +24,6 @@ fetch('http://localhost:3000/api/stats')
    <div>
    <h2>Home</h2>
    <p>Bine ai venit pe dashboard-ul meu!</p>
-   
    <p>Total proiecte: {Data.total}</p>
    <p>Finalizate: {Data.done}</p>
    <p>În lucru: {Data.inProgress}</p>
