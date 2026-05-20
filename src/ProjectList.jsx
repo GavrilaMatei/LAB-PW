@@ -11,7 +11,7 @@ function ProjectList() {
     const [editTitle, seteditTitle] = useState('');
     const [editTech, seteditTech] = useState('');
 
-         useEffect(function() {
+        useEffect(function() {
         fetch('http://localhost:3000/api/projects')
             .then(function(response) {
                return response.json(); 
@@ -61,23 +61,22 @@ function ProjectList() {
         
     }
 
-        async function handleSave(id,title,tech){
-        try {
-         const response = await fetch('http://localhost:3000/api/projects/' + id, {
-         method: 'PUT',
-         headers: { 'Content-Type': 'application/json' },
-         body: JSON.stringify({ title: title, tech: tech }),
-         });
-            const updatedProject = await response.json();
-            setProjects(projects.map(p => p._id === id ? updatedProject : p)) 
-            seteditID(null); 
-            seteditTitle('');
-            seteditTech('');
-         } catch (err) {
-         console.error('Eroare:', err);
-         }
-        
-    }
+async function handleSave(id,title,tech){
+    try {
+     const response = await fetch('http://localhost:3000/api/projects/' + id, {
+     method: 'PUT',
+     headers: { 'Content-Type': 'application/json' },
+     body: JSON.stringify({ title: title, tech: tech }),
+     });
+        const updatedProject = await response.json();
+        setProjects(projects.map(p => p._id === id ? updatedProject : p)) 
+        seteditID(null); 
+        seteditTitle('');
+        seteditTech('');
+     } catch (err) {
+     console.error('Eroare:', err);
+     }
+}
 
     async function handleSubmit() {
          try {

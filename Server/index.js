@@ -37,6 +37,15 @@ app.get  ('/api/projects/:id', async function(req,res){
     res.json(result);
 });
 */
+app.get('/api/stats', async function(req, res) {
+    try {
+        const total = await Project.countDocuments();
+        const done = await Project.countDocuments({ done: true });
+        res.json({ total: total, done: done, inProgress: total - done });
+    } catch (err) {
+        res.status(500).json({ error: 'Eroare server: ' + err});
+    }
+});
 
 app.post('/api/projects', async function(req, res) {
  try {
